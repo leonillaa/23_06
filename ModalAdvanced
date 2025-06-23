@@ -1,0 +1,41 @@
+import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import React, { useState, useEffect } from "react";
+import { useFonts } from "expo-font";
+import * as Font from "expo-font";
+
+export default function AdvancedModal() {
+
+
+    return (
+        <View>
+            <View style={{margin: 50}}>
+                <Image source={require('./assets/advancedupperbox.png')} style={{
+                    height: 350,
+                    width: '100%'
+                }} />
+            </View>
+
+            <View style={{ height: 2, width: "100%", backgroundColor: 'black' }}></View>
+            <View style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                <Text>Push-ups</Text>
+                <Text>00:30</Text><Text>0/30</Text>
+                <TouchableOpacity>
+                    <Text>
+                        ||/{"->"}
+                    </Text>
+
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Text>Next/Finish</Text>
+
+                </TouchableOpacity>
+            </View>
+
+        </View>
+    )
+}
